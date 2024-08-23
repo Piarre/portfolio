@@ -5,7 +5,7 @@ interface IData {
   location: string;
   locationLink: string;
   description: string;
-  summary: string;
+  summary?: string;
   avatarUrl: string;
   skills: string[];
   navbar: TNavbar[];
@@ -67,4 +67,12 @@ type TProject = ProjectWithImage | ProjectWithVideo;
 
 // Je veux qu'on puisse seulement mettre imagef ou vidfeo
 
-export { type IData, type TNavbar, type TContact, type TWork, type TEducation, type TBaseProject, type TProject };
+export {
+  type IData,
+  type TNavbar,
+  type TContact,
+  type TWork,
+  type TEducation,
+  type TBaseProject,
+  type TProject,
+};

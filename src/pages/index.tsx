@@ -26,7 +26,11 @@ export default function Home() {
                 yOffset={8}
                 text={`Hi, I'm ${DATA.name.split(" ")[0]} 👋`}
               />
-              <BlurFadeText className="max-w-[600px] md:text-xl" delay={BLUR_FADE_DELAY} text={DATA.description} />
+              <BlurFadeText
+                className="max-w-[600px] md:text-xl"
+                delay={BLUR_FADE_DELAY}
+                text={DATA.description}
+              />
             </div>
             {/* <BlurFade delay={BLUR_FADE_DELAY}>
               <Avatar className="size-28 border">
@@ -37,16 +41,18 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="about">
-        <BlurFade delay={BLUR_FADE_DELAY * 3}>
-          <h2 className="text-xl font-bold">About</h2>
-        </BlurFade>
-        <BlurFade delay={BLUR_FADE_DELAY * 4}>
-          <Markdown className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
-            {DATA.summary}
-          </Markdown>
-        </BlurFade>
-      </section>
+      {DATA.summary && (
+        <section id="about">
+          <BlurFade delay={BLUR_FADE_DELAY * 3}>
+            <h2 className="text-xl font-bold">About</h2>
+          </BlurFade>
+          <BlurFade delay={BLUR_FADE_DELAY * 4}>
+            <Markdown className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
+              {DATA.summary}
+            </Markdown>
+          </BlurFade>
+        </section>
+      )}
       <section id="work">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
@@ -69,7 +75,7 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <section id="education">
+      {/* <section id="education">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 7}>
             <h2 className="text-xl font-bold">Education</h2>
@@ -79,7 +85,7 @@ export default function Home() {
               I havn&apos;t started university yet !
             </p>
           </div>
-          {/* {DATA.education.map((education, id) => (
+          {DATA.education.map((education, id) => (
             <BlurFade key={education.school} delay={BLUR_FADE_DELAY * 8 + id * 0.05}>
               <ResumeCard
                 key={education.school}
@@ -92,9 +98,9 @@ export default function Home() {
               />
             </BlurFade>
           ))}
-          */}
+         
         </div>
-      </section>
+      </section> */}
       <section id="skills">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
@@ -117,10 +123,12 @@ export default function Home() {
                 <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
                   My Projects
                 </div>
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Check out my latest work</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                  Check out my work
+                </h2>
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  I&apos;ve worked on a variety of projects, from simple websites to complex web applications. Here are
-                  a few of my favorites.
+                  During my high school years, I have been working on various projects. Here are
+                  some of my favorites.
                 </p>
               </div>
             </div>

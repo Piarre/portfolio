@@ -9,7 +9,6 @@ export const DATA: IData = {
   location: "Paris, FR",
   locationLink: "https://www.google.com/maps/place/paris",
   description: "A auto-dytact 17 high school student creating apps.",
-  summary: "",
   avatarUrl: "/me.png",
   skills: [
     "TypeScript",
@@ -34,12 +33,7 @@ export const DATA: IData = {
     "Firebase",
     "Vercel",
   ],
-  navbar: [
-    { href: "/", icon: HomeIcon, label: "Home" },
-    // { href: "/blog", icon: NotebookIcon, label: "Blog" },
-    // { href: "#", icon: CodeIcon, label: "Projects" },
-    // { href: "#", icon: PencilLine, label: "Notes" },
-  ],
+  navbar: [{ href: "/", icon: HomeIcon, label: "Home" }],
   contact: {
     email: "contact@pierre-ide.fr",
     social: {
@@ -47,7 +41,13 @@ export const DATA: IData = {
         name: "GitHub",
         url: "https://github.com/Piarre",
         icon: Icons.github,
-        navbar: false,
+        navbar: true,
+      },
+      LinkedIn: {
+        name: "LinkedIn",
+        url: "https://www.linkedin.com/in/pierre-ide-8829582aa/",
+        icon: Icons.linkedin,
+        navbar: true,
       },
     },
   },
@@ -62,11 +62,33 @@ export const DATA: IData = {
       logoUrl: "/caf.svg",
       start: "Feb",
       end: "Apr 2024",
-      description: "Create an WebApp using PHP, jQuery and Bootstrap to help my team to manage products licenses.",
+      description:
+        "Create an WebApp using PHP, jQuery and Bootstrap to help my team to manage products licenses.",
     },
   ],
   education: [],
   projects: [
+    {
+      title: "NextJS Starter",
+      description: "A NextJS starter",
+      href: "https://start.piarre.app",
+      dates: "2024",
+      active: true,
+      links: [
+        {
+          href: "https://start.piarre.app",
+          icon: <Icons.globe className="size-3" />,
+          type: "Website",
+        },
+        {
+          href: "https://github.com/Piarre/nextjs-starter",
+          icon: <Icons.github className="size-3" />,
+          type: "Github",
+        },
+      ],
+      technologies: ["NextJS", "TypeScript", "TailwindCSS", "Shadcn/UI", "HonoJS"],
+      image: "/next-starter.png",
+    },
     {
       title: "SLiM",
       href: "#",
@@ -74,13 +96,7 @@ export const DATA: IData = {
       active: true,
       description: "",
       technologies: ["PHP", "jQuery", "HTML", "CSS", "JS", "PostreSQL"],
-      links: [
-        // {
-        //   type: "Website",
-        //   href: "https://chatcollect.com",
-        //   icon: <Icons.globe className="size-3" />,
-        // },
-      ],
+      links: [],
       image: "/slim.png",
     },
   ],
