@@ -23,7 +23,7 @@ type TContact = {
     [x: string]: {
       name: string;
       url: string;
-      icon: (x: any) => JSX.Element;
+      icon: any;
       navbar: boolean;
     };
   };
