@@ -32,7 +32,7 @@ type TContact = {
 type TWork = {
   company: string;
   href: string;
-  badges: [];
+  badges: any[];
   location: string;
   title: string;
   logoUrl: string;
