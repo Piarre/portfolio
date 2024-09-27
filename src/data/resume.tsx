@@ -5,6 +5,7 @@ import { CodeIcon, HomeIcon, NotebookIcon, PencilLine } from "lucide-react";
 export const DATA: IData = {
   name: "Pierre",
   initials: "PI",
+  summary: "En recherche d'une PMFP (stage) du 04 novembre au 20 décembre 2024 (7 semaines).",
   url: "https://pierre-ide.fr",
   location: "Paris, FR",
   locationLink: "https://www.google.com/maps/place/paris",
@@ -49,6 +50,12 @@ export const DATA: IData = {
         icon: Icons.linkedin,
         navbar: true,
       },
+      Resume: {
+        name: "Resume",
+        url: "/resume.pdf",
+        icon: NotebookIcon,
+        navbar: true,
+      }
     },
   },
   work: [
