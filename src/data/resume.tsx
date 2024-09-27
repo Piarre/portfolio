@@ -51,12 +51,11 @@ export const DATA: IData = {
       },
     },
   },
-
   work: [
     {
       company: "CAF de Paris",
       href: "https://www.caf.fr/allocataires/caf-de-paris",
-      badges: [],
+      badges: ["Internship"],
       location: "Paris",
       title: "Web Developer",
       logoUrl: "/caf.svg",
@@ -64,6 +63,28 @@ export const DATA: IData = {
       end: "Apr 2024",
       description:
         "Create an WebApp using PHP, jQuery and Bootstrap to help my team to manage products licenses.",
+    },
+    {
+      company: "SAD Telecom",
+      href: "",
+      badges: ["Internship"],
+      location: "Nanterre",
+      title: "Fiber optic technician",
+      logoUrl: "/",
+      start: "Dec",
+      end: "2021",
+      description: "I was in charge of the installation of fiber optic cables in the Paris region.",
+    },
+    {
+      company: "Yso Corp",
+      href: "https://www.ysocorp.com/",
+      badges: ["Extra"],
+      location: "Enghien-les-Bains",
+      title: "Wev Developer",
+      logoUrl: "https://www.ysocorp.com/favicon.png",
+      start: "Jun",
+      end: "2021",
+      description: "In charge of Angular developement for a restaurant website.",
     },
   ],
   education: [],
