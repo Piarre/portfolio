@@ -5,6 +5,8 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
+export const uppercase = (x: string) => `${x.charAt(0).toUpperCase()}${x.slice(1)}`;
+
 export function formatDate(date: string) {
   let currentDate = new Date().getTime();
   if (!date.includes("T")) {
