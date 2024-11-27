@@ -5,7 +5,8 @@ import { CodeIcon, HomeIcon, NotebookIcon, PencilLine } from "lucide-react";
 export const DATA: IData = {
   name: "Pierre",
   initials: "PI",
-  summary: "En recherche d'une PMFP (stage) du 04 novembre au 20 décembre 2024 (7 semaines).",
+  summary:
+    "French 17 years old student, I am passionate about programming and I am always looking for new challenges.",
   url: "https://pierre-ide.fr",
   location: "Paris, FR",
   locationLink: "https://www.google.com/maps/place/paris",
@@ -33,8 +34,18 @@ export const DATA: IData = {
     "MySQL",
     "Firebase",
     "Vercel",
+    "Weweb",
+    "Directus",
+    "DatoCMS",
   ],
-  navbar: [{ href: "/", icon: HomeIcon, label: "Home" }],
+  navbar: [
+    { href: "/", icon: HomeIcon, label: "Home" },
+    {
+      href: "/#projects",
+      icon: CodeIcon,
+      label: "Projects",
+    },
+  ],
   contact: {
     email: "contact@pierre-ide.fr",
     social: {
@@ -55,10 +66,24 @@ export const DATA: IData = {
         url: "/resume.pdf",
         icon: NotebookIcon,
         navbar: true,
-      }
+      },
     },
   },
   work: [
+    {
+      company: "Scroll Agency",
+      href: "https://agence-scroll.com",
+      badges: ["Freelance", "Internship"],
+      location: "Paris, 11th",
+      title: "Web Developer",
+      logoUrl: "/scroll.png",
+      start: "Oct",
+      end: `${new Date().getMonth()} ${new Date().getFullYear()}` == "12 2024" ? "Dec 2024" : "Now",
+      description:
+        `${new Date().getMonth()} ${new Date().getFullYear()}` == "12 2024"
+          ? "I was in charge of a WebApp using, Weweb, DatoCMS and Brevo."
+          : "I'm in charge of a WebApp using, Weweb, DatoCMS and Brevo.",
+    },
     {
       company: "CAF de Paris",
       href: "https://www.caf.fr/allocataires/caf-de-paris",
