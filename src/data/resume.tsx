@@ -6,7 +6,7 @@ export const DATA: IData = {
   name: "Pierre",
   initials: "PI",
   summary:
-    "French 17 years old student, I am passionate about programming and I am always looking for new challenges.",
+    "French 17 years old student, I am a self-taught developer. I am passionate about web development. Currently learning Rust",
   url: "https://pierre-ide.fr",
   location: "Paris, FR",
   locationLink: "https://www.google.com/maps/place/paris",
@@ -78,11 +78,8 @@ export const DATA: IData = {
       title: "Web Developer",
       logoUrl: "/scroll.png",
       start: "Oct",
-      end: `${new Date().getMonth()} ${new Date().getFullYear()}` == "12 2024" ? "Dec 2024" : "Now",
-      description:
-        `${new Date().getMonth()} ${new Date().getFullYear()}` == "12 2024"
-          ? "I was in charge of a WebApp using, Weweb, DatoCMS and Brevo."
-          : "I'm in charge of a WebApp using, Weweb, DatoCMS and Brevo.",
+      end: "Dec 2024",
+      description: "I was in charge of a WebApp using, Weweb, DatoCMS and Brevo.",
     },
     {
       company: "CAF de Paris",
@@ -121,6 +118,16 @@ export const DATA: IData = {
   ],
   education: [],
   projects: [
+    {
+      title: "AminoPro - NHCO",
+      description: "AminoPro is a web application for NHCO Nutrition.",
+      href: "#",
+      dates: "2024",
+      active: true,
+      technologies: ["Weweb", "DatoCMS", "Brevo"],
+      image: "/AminoPro-NHCO.png",
+      links: [],
+    },
     {
       title: "NextJS Starter",
       description: "A NextJS starter",
