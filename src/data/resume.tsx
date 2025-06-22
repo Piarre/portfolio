@@ -1,22 +1,27 @@
 import { Icons } from "@/components/icons";
 import { IData } from "@/lib/types";
 import { CodeIcon, HomeIcon, NotebookIcon, PencilLine } from "lucide-react";
+import * as dayjs from "dayjs";
+import { getAge } from "@/lib/utils";
+
+const AGE = getAge();
 
 export const DATA: IData = {
   name: "Pierre",
   initials: "PI",
-  summary:
-    "French 17 years old student, I am a self-taught developer. I am passionate about web development. Currently learning Rust",
+  summary: `French ${AGE} years old student, I am a self-taught developer. I am passionate about web development. Currently learning Rust & Go`,
   url: "https://pierre-ide.fr",
   location: "Paris, FR",
   locationLink: "https://www.google.com/maps/place/paris",
-  description: "A auto-dytact 17 high school student creating apps.",
+  description: `A auto-dytact ${AGE} high school student creating apps.`,
   avatarUrl: "/me.png",
   skills: [
     "TypeScript",
     "JavaScript",
     "PHP",
     "PowerShell",
+    "Rust",
+    "Go",
     "Swift",
     "Java",
     "Python",
@@ -29,9 +34,9 @@ export const DATA: IData = {
     "Bun",
     "Git",
     "Docker",
-    "linux",
+    "Linux",
     "Hono",
-    "MySQL",
+    "MySQL/MariaDB",
     "Firebase",
     "Vercel",
     "Weweb",
@@ -61,19 +66,19 @@ export const DATA: IData = {
         icon: Icons.linkedin,
         navbar: true,
       },
-      Resume: {
-        name: "Resume",
-        url: "/resume.pdf",
-        icon: NotebookIcon,
-        navbar: true,
-      },
+      // Resume: {
+      //   name: "Resume",
+      //   url: "/resume.pdf",
+      //   icon: NotebookIcon,
+      //   navbar: true,
+      // },
     },
   },
   work: [
     {
       company: "Scroll Agency",
       href: "https://agence-scroll.com",
-      badges: ["Freelance", "Internship"],
+      badges: ["Freelance"],
       location: "Paris, 11th",
       title: "Web Developer",
       logoUrl: "/scroll.png",

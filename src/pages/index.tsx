@@ -2,11 +2,12 @@ import { HackathonCard } from "@/components/hackathon-card";
 import { BentoCard, BentoGrid } from "@/components/magicui/bento-grid";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
-import { ProjectCard } from "@/components/project-card";
+import { NewProjectCard, ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
+import { uppercase } from "@/lib/utils";
 import { BellIcon } from "lucide-react";
 import Link from "next/link";
 import Markdown from "react-markdown";
@@ -109,7 +110,7 @@ export default function Home() {
           <div className="flex flex-wrap gap-1">
             {DATA.skills.map((skill, id) => (
               <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
-                <Badge key={skill}>{skill}</Badge>
+                <Badge key={skill}>{uppercase(skill)}</Badge>
               </BlurFade>
             ))}
           </div>
@@ -133,7 +134,7 @@ export default function Home() {
               </div>
             </div>
           </BlurFade>
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 max-w-[800px] mx-auto">
             {DATA.projects.map((project, id) => (
               <BlurFade key={project.title} delay={BLUR_FADE_DELAY * 12 + id * 0.05}>
                 <ProjectCard
