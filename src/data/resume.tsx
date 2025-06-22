@@ -1,7 +1,6 @@
 import { Icons } from "@/components/icons";
 import { IData } from "@/lib/types";
 import { CodeIcon, HomeIcon, NotebookIcon, PencilLine } from "lucide-react";
-import * as dayjs from "dayjs";
 import { getAge } from "@/lib/utils";
 
 const AGE = getAge();
