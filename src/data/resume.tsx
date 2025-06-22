@@ -77,7 +77,7 @@ export const DATA: IData = {
     {
       company: "Scroll Agency",
       href: "https://agence-scroll.com",
-      badges: ["Freelance"],
+      badges: ["Internship"],
       location: "Paris, 11th",
       title: "Web Developer",
       logoUrl: "/scroll.png",
