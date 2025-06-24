@@ -75,6 +75,17 @@ export const DATA: IData = {
   },
   work: [
     {
+      company: "Milleis Banque Privée",
+      href: "https://www.milleis.fr",
+      badges: ["Internship"],
+      location: "Paris, 12th",
+      title: "Developer",
+      logoUrl: "/milleis.png",
+      start: "Jun",
+      end: "Present",
+      description: "",
+    },
+    {
       company: "Scroll Agency",
       href: "https://agence-scroll.com",
       badges: ["Internship"],
