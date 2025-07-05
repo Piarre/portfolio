@@ -1,6 +1,6 @@
 import { Icons } from "@/components/icons";
 import { IData } from "@/lib/types";
-import { CodeIcon, HomeIcon, NotebookIcon, PencilLine } from "lucide-react";
+import { CodeIcon, HomeIcon, FileUser } from "lucide-react";
 import { getAge } from "@/lib/utils";
 
 const AGE = getAge();
@@ -65,12 +65,12 @@ export const DATA: IData = {
         icon: Icons.linkedin,
         display: true,
       },
-      // Resume: {
-      //   name: "Resume",
-      //   url: "/resume.pdf",
-      //   icon: NotebookIcon,
-      //   navbar: true,
-      // },
+      Resume: {
+        name: "Resume",
+        url: "/resume.pdf",
+        icon: FileUser,
+        display: true,
+      },
     },
   },
   work: [
@@ -81,9 +81,9 @@ export const DATA: IData = {
       location: "Paris, 12th",
       title: "Developer",
       logoUrl: "/milleis.png",
-      start: "Jun",
+      start: "Jun - Jul 2025",
       end: "Present",
-      description: "",
+      description: "I had to create a WebApp to generate DORA report for the European Bank.",
     },
     {
       company: "Scroll Agency",

@@ -6,15 +6,26 @@ import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
+import { SkillsReplaceName } from "@/data/constants";
 import { DATA } from "@/data/resume";
+import { getReadme } from "@/lib/getReadme";
 import { uppercase } from "@/lib/utils";
-import { BellIcon } from "lucide-react";
-import Link from "next/link";
+import { useEffect, useState } from "react";
 import Markdown from "react-markdown";
 
 const BLUR_FADE_DELAY = 0.04;
 
 export default function Home() {
+  const [skills, setSkills] = useState<string>("");
+
+  useEffect(() => {
+    const fetchSkills = async () => {
+      return setSkills(await getReadme());
+    };
+
+    fetchSkills();
+  });
+
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
       <section id="hero">
@@ -33,12 +44,12 @@ export default function Home() {
                 text={DATA.description}
               />
             </div>
-            {/* <BlurFade delay={BLUR_FADE_DELAY}>
+            <BlurFade delay={BLUR_FADE_DELAY}>
               <Avatar className="size-28 border">
                 <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
-                <AvatarFallback>{DATA.initials}</AvatarFallback>
+                <AvatarFallback className="text-3xl">{DATA.initials}</AvatarFallback>
               </Avatar>
-            </BlurFade> */}
+            </BlurFade>
           </div>
         </div>
       </section>
@@ -109,9 +120,9 @@ export default function Home() {
             <h2 className="text-xl font-bold">Skills</h2>
           </BlurFade>
           <div className="flex flex-wrap gap-1">
-            {DATA.skills.map((skill, id) => (
+            {skills.split(",").map((skill, id) => (
               <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
-                <Badge key={skill}>{uppercase(skill)}</Badge>
+                <Badge key={skill}>{uppercase(SkillsReplaceName[skill] ?? skill)}</Badge>
               </BlurFade>
             ))}
           </div>

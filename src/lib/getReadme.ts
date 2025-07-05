@@ -1,19 +1,18 @@
-export const getReadme = async () => {
+import { DATA } from "@/data/resume";
+
+export const getReadme = async (): Promise<string> => {
   return await fetch("https://raw.githubusercontent.com/Piarre/Piarre/main/README.md")
-    .then((res) => res.text())
-    .then((res) => {
-      return (
-        // prettier-ignore
-        new DOMParser()
-        .parseFromString(res, "text/html")
-        .querySelector('a[href="https://skillicons.dev"] img')
-          ?.outerHTML ?? "Element not found"
-      );
+    .then(async (res) => await res.text())
+    .then((text) => {
+      const matches = text.match(/.*https?:\/\/(www\.)?skillicons\.dev\S*.*/g)
+        ?.map((match) => {
+          return match.replace(/!\[.*?\]\(https:\/\/skillicons\.dev\/icons\?i=/g, "").replace(/&perline=\d+\)/g, "").slice();
+        });
+
+      return matches?.join(",") ?? DATA.skills.map(skill => skill.toLowerCase()).join(",");
     })
-    .then((x) =>
-      x
-        .split("icons?i=")[1]
-        .split(",")
-        .map((x) => x.split("&")[0])
-    );
+    .catch((error) => {
+      console.error("Error fetching README:", error);
+      return "";
+    });
 };
