@@ -57,13 +57,13 @@ export const DATA: IData = {
         name: "GitHub",
         url: "https://github.com/Piarre",
         icon: Icons.github,
-        navbar: true,
+        display: true,
       },
       LinkedIn: {
         name: "LinkedIn",
         url: "https://www.linkedin.com/in/pierre-ide-8829582aa/",
         icon: Icons.linkedin,
-        navbar: true,
+        display: true,
       },
       // Resume: {
       //   name: "Resume",

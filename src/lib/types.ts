@@ -24,7 +24,7 @@ type TContact = {
       name: string;
       url: string;
       icon: any;
-      navbar: boolean;
+      display: boolean;
     };
   };
 };
