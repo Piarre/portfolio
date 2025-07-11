@@ -81,8 +81,8 @@ export const DATA: IData = {
       location: "Paris, 12th",
       title: "Developer",
       logoUrl: "/milleis.png",
-      start: "Jun - Jul 2025",
-      end: "Present",
+      start: "Jun",
+      end: "Jul 2025",
       description: "I had to create a WebApp to generate DORA report for the European Bank.",
     },
     {
