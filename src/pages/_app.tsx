@@ -6,6 +6,7 @@ import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import { GeistSans } from "geist/font/sans";
 
+import { Analytics } from "@vercel/analytics/next"
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <main
@@ -18,6 +19,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <TooltipProvider delayDuration={0}>
           <Component {...pageProps} />
           <Navbar />
+            <Analytics />
         </TooltipProvider>
       </ThemeProvider>
     </main>
