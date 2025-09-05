@@ -77,6 +77,28 @@ export const DATA: IData = {
     {
       company: "Milleis Banque Privée",
       href: "https://www.milleis.fr",
+      badges: ["Apprenticeship"],
+      location: "Paris, 12th",
+      title: "Developer",
+      logoUrl: "/milleis.png",
+      start: "Sept 2025",
+      end: "Sept 2027",
+      description: "",
+    },
+    {
+      company: "EnumaCloud",
+      href: "#",
+      badges: ["Extra", "Summer job"],
+      location: "Paris",
+      title: "Full-Stack Developer",
+      logoUrl: "",
+      start: "Aug",
+      end: "2025",
+      description: "I started an Django project to manage ERPs as (Shopify, ...)",
+    },
+    {
+      company: "Milleis Banque Privée",
+      href: "https://www.milleis.fr",
       badges: ["Internship"],
       location: "Paris, 12th",
       title: "Developer",
@@ -131,7 +153,16 @@ export const DATA: IData = {
       description: "In charge of Angular developement for a restaurant website.",
     },
   ],
-  education: [],
+  education: [
+    {
+      school: "AFORP",
+      start: "2025",
+      end: "2027",
+      degree: "BTS SIO (SISR)",
+      href: "#",
+      logoUrl: "",
+    }
+  ],
   projects: [
     {
       title: "AminoPro - NHCO",
